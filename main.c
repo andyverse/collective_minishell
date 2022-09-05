@@ -72,5 +72,6 @@ int	main(int argc, char **argv, char **env)
 	}
 	rl_clear_history();
 	// THIS IS FIRST TEST
+	// учимся работать с гитом спустя год 
 	return (0);
 }
