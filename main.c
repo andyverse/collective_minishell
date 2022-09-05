@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chfederi <chfederi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 21:55:58 by chfederi          #+#    #+#             */
-/*   Updated: 2022/08/25 22:02:29 by chfederi         ###   ########.fr       */
+/*   Updated: 2022/09/05 17:58:50 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,6 @@ int	main(int argc, char **argv, char **env)
 		parse_and_execute(&envp_list, cmd, split_words, read_str);
 	}
 	rl_clear_history();
+	// THIS IS FIRST TEST
 	return (0);
 }
