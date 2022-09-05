@@ -3,40 +3,87 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: slaree <slaree@student.42.fr>              +#+  +:+       +#+         #
+#    By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/17 14:24:38 by mcherrie          #+#    #+#              #
-#    Updated: 2022/08/25 19:29:35 by slaree           ###   ########.fr        #
+#    Updated: 2022/09/05 21:32:22 by fnochiza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME_MS		=	minishell
-HEADER_MS	=	minishell.h
+CC = gcc
 
+# OBJS	=	$(SRC:%.c=%.o)
 
-FILES_MS	=	builtin_utils.c cd.c check.c cmd_args.c count.c echo.c env.c exec_utils.c execute.c exit.c \
-				export.c free.c heredoc.c init.c lst_utils.c parse_utils.c pipe_utils.c pipex.c pwd.c redirect.c \
-				signal.c special_simbols.c split_words.c struct_utils.c struct.c unset.c main.c utils1.c utils2.c \
-				utils3.c utils4.c ft_atoi.c ft_split.c
+OBJS	=	$(SRC:%.c=%.o)
 
-OBJ_MS		=	$(FILES_MS:%.c=%.o)
-FLAGS_MS	=	-Wall -Wextra -Werror
+HDR	=	minishell.h
 
+NAME	=	minishell
 
-.PHONY	: all clean fclean re libft
+FLAGS = -Werror -Wall -Wextra
 
-all		: $(NAME_MS)
+SRC			=	z_mini_cd.c \
+				z_mini_pwd.c \
+				z_mini_env.c \
+				z_mini_init.c \
+				z_mini_free.c \
+				z_mini_exit.c \
+				z_mini_main.c \
+				z_mini_echo.c \
+				z_mini_check.c \
+				z_mini_pipex.c \
+				z_mini_unset.c \
+				z_mini_count.c \
+				z_mini_signal.c \
+				z_mini_export.c \
+				z_mini_struct.c \
+				z_mini_utils1.c \
+				z_mini_utils2.c \
+				z_mini_utils3.c \
+				z_mini_utils4.c \
+				z_mini_execute.c \
+				z_mini_heredoc.c \
+				z_mini_ft_atoi.c \
+				z_mini_cmd_args.c \
+				z_mini_ft_split.c \
+				z_mini_redirect.c \
+				z_mini_lst_utils.c \
+				z_mini_exec_utils.c \
+				z_mini_pipe_utils.c \
+				z_mini_parse_utils.c \
+				z_mini_split_words.c \
+				z_mini_struct_utils.c \
+				z_mini_builtin_utils.c \
+				z_mini_special_simbols.c
 
-%.o	:	%.c  $(HEADER_MS) Makefile
-	cc $(FLAGS_MS) -I$(shell brew --prefix readline)/include -c $< -o $@ -I $(HEADER_MS)
+RDLN		=	-lreadline -L ~/.brew/Cellar/readline/8.1.2/lib \
+				-I~/.brew/Cellar/readline/8.1.2/include
 
-$(NAME_MS):	$(OBJ_MS)
-	cc $(FLAGS_MS)  -L$(shell brew --prefix readline)/lib -lreadline $(OBJ_MS) -o $@
+all		:  $(NAME)
+
+%.o	:	%.c  $(HDR) Makefile
+	cc $(FLAGS) -I$(shell brew --prefix readline)/include -c $< -o $@ -I $(HDR)
+
+# $(NAME):	$(OBJS)
+# 	cc $(FLAGS)  -L$(shell brew --prefix readline)/lib -lreadline $(OBJS) -o $@
+# 	rm -rf *.o
+
+${NAME}: $(OBJS) $(HDR) Makefile
+	${CC} ${FLAGS} -g ${OBJS} $(RDLN) -o ${NAME}
+
+# ${NAME}: $(OBJS)
+# 	${CC} ${FLAGS} -L$(shell brew --prefix readline)/lib -lreadline ${OBJS}  -o ${NAME}
+# 	rm -rf *.o
 
 clean	:
-	rm -rf $(OBJ_MS)
+	rm -rf *.o
 
 fclean	:	clean
-	rm -rf $(NAME_MS)
+	rm -rf $(NAME) ${OBJS}
 
-re		: fclean all
+e	:	fclean all
+		rm -rf *.o
+
+re	:	fclean all
+
+.PHONY	: all clean fclean re libft

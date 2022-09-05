@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chfederi <chfederi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 21:56:05 by chfederi          #+#    #+#             */
-/*   Updated: 2022/08/25 21:59:54 by chfederi         ###   ########.fr       */
+/*   Created: 2022/09/05 20:27:43 by fnochiza          #+#    #+#             */
+/*   Updated: 2022/09/05 20:28:04 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
-//# include "libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
