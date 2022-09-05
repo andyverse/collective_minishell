@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 21:55:58 by chfederi          #+#    #+#             */
-/*   Updated: 2022/09/05 18:01:40 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/05 18:07:49 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,6 @@ int	main(int argc, char **argv, char **env)
 	rl_clear_history();
 	// THIS IS FIRST TEST
 	// THIS IS SECOND TEST
+	// учимся работать с гитом спустя год
 	return (0);
 }
