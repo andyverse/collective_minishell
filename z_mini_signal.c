@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 18:38:51 by fnochiza          #+#    #+#             */
-/*   Updated: 2022/09/05 18:39:02 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/06 20:38:47 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,10 @@ void	handle_signals(void)
 
 void	ctrl_c(int sig)
 {
-	if (sig == SIGINT)
+	printf("\n");
+	(void) sig;
+	if (g_exit_status != 0)
 	{
-		printf("\n");
 		rl_replace_line("", 1);
 		rl_on_new_line();
 		rl_redisplay();
