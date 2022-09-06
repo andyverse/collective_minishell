@@ -6,13 +6,11 @@
 #    By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/17 14:24:38 by mcherrie          #+#    #+#              #
-#    Updated: 2022/09/05 21:32:22 by fnochiza         ###   ########.fr        #
+#    Updated: 2022/09/06 20:56:21 by fnochiza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-
-# OBJS	=	$(SRC:%.c=%.o)
 
 OBJS	=	$(SRC:%.c=%.o)
 
@@ -64,16 +62,8 @@ all		:  $(NAME)
 %.o	:	%.c  $(HDR) Makefile
 	cc $(FLAGS) -I$(shell brew --prefix readline)/include -c $< -o $@ -I $(HDR)
 
-# $(NAME):	$(OBJS)
-# 	cc $(FLAGS)  -L$(shell brew --prefix readline)/lib -lreadline $(OBJS) -o $@
-# 	rm -rf *.o
-
 ${NAME}: $(OBJS) $(HDR) Makefile
 	${CC} ${FLAGS} -g ${OBJS} $(RDLN) -o ${NAME}
-
-# ${NAME}: $(OBJS)
-# 	${CC} ${FLAGS} -L$(shell brew --prefix readline)/lib -lreadline ${OBJS}  -o ${NAME}
-# 	rm -rf *.o
 
 clean	:
 	rm -rf *.o

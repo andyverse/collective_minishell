@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 18:29:07 by fnochiza          #+#    #+#             */
-/*   Updated: 2022/09/06 18:41:46 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/06 20:57:33 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	print_export_error(char *str)
 	{
 		ft_putstr_fd("ḾĪŇĪŠĤĚĹĹ ⟹  : export: `", 2);
 		ft_putstr_fd(str, 2);
-		ft_putendl_fd("': not a valid identifier", 2);
+		ft_putendl_fd(": not a valid identifier", 2);
 	}
 }
 

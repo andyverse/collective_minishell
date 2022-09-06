@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 18:38:27 by fnochiza          #+#    #+#             */
-/*   Updated: 2022/09/05 18:38:35 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/06 20:58:49 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	left_redirect(t_cmd *cmd)
 	output = open(cmd->file, O_RDONLY);
 	if (output == -1)
 	{
-		ft_putstr_fd("<3: ", 2);
+		ft_putstr_fd("ḾĪŇĪŠĤĚĹĹ ⟹  : ", 2);
 		ft_putstr_fd(cmd->file, 2);
 		ft_putendl_fd(": No such file or directory", 2);
 		g_exit_status = 126;
@@ -40,7 +40,7 @@ void	right_redirect(t_cmd *cmd)
 		output = open(cmd->file, O_RDWR | O_CREAT | O_TRUNC, 0644);
 		if (output == -1)
 		{
-			ft_putstr_fd("<3: ", 2);
+			ft_putstr_fd("ḾĪŇĪŠĤĚĹĹ ⟹  : ", 2);
 			ft_putstr_fd(cmd->file, 2);
 			ft_putendl_fd(": Permission denied", 2);
 			g_exit_status = 126;
@@ -65,7 +65,7 @@ void	double_right_redirect(t_cmd *cmd)
 		output = open(cmd->file, O_RDWR | O_CREAT | O_APPEND, 0644);
 		if (output == -1)
 		{
-			ft_putstr_fd("<3: ", 2);
+			ft_putstr_fd("ḾĪŇĪŠĤĚĹĹ ⟹  : ", 2);
 			ft_putstr_fd(cmd->file, 2);
 			ft_putendl_fd(": Permission denied", 2);
 			g_exit_status = 126;

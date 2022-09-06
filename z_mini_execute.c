@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 18:28:12 by fnochiza          #+#    #+#             */
-/*   Updated: 2022/09/05 18:28:19 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/06 20:57:15 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	execve_handler(t_cmd *cmd, t_exec *exec, t_envp *envp_list)
 		get_env(envp_list, exec);
 		make_full_com(cmd, exec);
 		execve(exec->cmd_exec, exec->cmd_full, exec->env);
-		ft_putstr_fd("<3: ", 2);
+		ft_putstr_fd("ḾĪŇĪŠĤĚĹĹ ⟹  : ", 2);
 		perror(exec->cmd_full[0]);
 		g_exit_status = 127;
 		free_pipe_struct(exec);

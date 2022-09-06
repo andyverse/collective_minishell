@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 18:38:01 by fnochiza          #+#    #+#             */
-/*   Updated: 2022/09/05 18:38:07 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/06 20:58:34 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_pwd(t_envp *envp_list)
 		{
 			if (chdir("..") == -1)
 			{
-				perror("<3: pwd: ");
+				perror("ḾĪŇĪŠĤĚĹĹ ⟹  : pwd: ");
 				return (1);
 			}
 			pwd = getcwd(NULL, 0);
