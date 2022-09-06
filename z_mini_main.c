@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 18:33:52 by fnochiza          #+#    #+#             */
-/*   Updated: 2022/09/06 19:28:13 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/06 19:58:30 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ int	main(int argc, char **argv, char **env)
 		read_str = read_line();
 		handle_signals2();
 		parse_and_execute(&envp_list, cmd, split_words, read_str);
+		
 	}
 	rl_clear_history();
 	return (0);
