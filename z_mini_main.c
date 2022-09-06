@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 18:33:52 by fnochiza          #+#    #+#             */
-/*   Updated: 2022/09/06 18:25:00 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/06 19:28:13 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	check_args(int argc, char **argv)
 {
 	if (argc > 1)
 	{
-		ft_putstr_fd("<3 : ", 2);
+		ft_putstr_fd("ḾĪŇĪŠĤĚĹĹ ⟹  : ", 2);
 		ft_putstr_fd(argv[1], 2);
 		ft_putendl_fd(": No such file or directory", 2);
 		exit(127);
