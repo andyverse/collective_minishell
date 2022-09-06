@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 18:21:35 by fnochiza          #+#    #+#             */
-/*   Updated: 2022/09/05 18:21:39 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/06 18:41:56 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,5 @@ void	add_var_to_envp_list(t_envp **envp_list, char **array, char *str)
 		}
 		tmp = tmp->next;
 	}
-	envp_add_front(envp_list, envp_new(str));
+	envp_add_to_end(*envp_list, envp_new(str));
 }

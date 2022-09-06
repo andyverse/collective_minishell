@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 18:32:59 by fnochiza          #+#    #+#             */
-/*   Updated: 2022/09/05 18:33:08 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/06 18:41:19 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ t_split	*init_split(char *str)
 
 	split_w = malloc(sizeof(t_split));
 	split_w->words = count_words(str, 0, 0);
-	split_w->split_w = (char **)malloc((split_w->words + 1) * \
-															sizeof(char *));
+	split_w->split_w = (char **)malloc((split_w->words + 1) * sizeof(char *));
 	if (!split_w->split_w)
 		exit(1);
 	return (split_w);

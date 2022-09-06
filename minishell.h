@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 20:27:43 by fnochiza          #+#    #+#             */
-/*   Updated: 2022/09/05 20:28:04 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/06 17:36:43 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ int			ft_check_eve_quotes(char *str);
 int			t_check_first_end(char *str);
 int			check_syntax(char *str);
 int			check_double_delim(char **arr);
+void		envp_add_to_end(t_envp *lst, t_envp *new);
 
 char		*subst_dollar(char *cmd, t_envp *envp_list);
 int			replace_dollar(char **str, t_envp *envp_list);

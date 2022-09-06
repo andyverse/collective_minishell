@@ -6,7 +6,7 @@
 /*   By: fnochiza <fnochiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 18:33:28 by fnochiza          #+#    #+#             */
-/*   Updated: 2022/09/05 18:33:36 by fnochiza         ###   ########.fr       */
+/*   Updated: 2022/09/06 18:41:09 by fnochiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*read_line(void)
 {
 	char	*read_str;
 
-	read_str = readline("<3 ");
+	read_str = readline("ḾĪŇĪŠĤĚĹĹ ⟹  ");
 	if (!read_str)
 	{
 		ft_putendl_fd("exit", 2);
@@ -36,7 +36,7 @@ void	read_envp(char **env, t_envp **envp_list)
 	while (env[i])
 	{
 		new = envp_new(env[i++]);
-		envp_add_front(envp_list, new);
+		envp_add_to_end(*envp_list, new);
 	}
 }
 
